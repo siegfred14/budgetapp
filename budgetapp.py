@@ -25,3 +25,6 @@ class Shopping:
         pass
 
 
+shop = Shopping("pilau", "jacket", "movie")
+print(shop.cloth)
+shop.deposit()
