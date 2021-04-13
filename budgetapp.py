@@ -13,3 +13,8 @@ class Shopping:
     def withdraw(self):
         balance = 0
         withdrawn = input("W E L C O M E ! \n How Much would you like to withdraw? \n")
+        if balance >= withdrawn:
+            balance -= withdrawn
+            return balance
+        else:
+            print("insufficient funds!")
