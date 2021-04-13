@@ -18,3 +18,6 @@ class Shopping:
             return balance
         else:
             print("insufficient funds!")
+    def balance(self):
+        pass
+
