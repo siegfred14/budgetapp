@@ -10,3 +10,6 @@ class Shopping:
         input("W E L C O M E ! \n How Much would you like to deposit? \n")
 
 
+    def withdraw(self):
+        balance = 0
+        withdrawn = input("W E L C O M E ! \n How Much would you like to withdraw? \n")
