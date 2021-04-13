@@ -21,3 +21,7 @@ class Shopping:
     def balance(self):
         pass
 
+    def transfer(self):
+        pass
+
+
