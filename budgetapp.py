@@ -4,16 +4,23 @@ class Shopping:
         self.cloth = clothing
         self.entertain = entertainment
 
+    # creating a database for our budgets
     budget_record = {
         "food": 0,
         "clothing": 0,
         "entertainment": 0
     }
+
+    # setting values for keys
     set_food_budget = int(input("Enter Budget for food"))
     set_clothing_budget = int(input("Enter Budget for Clothing"))
     set_entertainment_budget = int(input("Enter Budget for Entertainment"))
 
-
+    # updating database
+    budget_record["food"] += set_food_budget
+    budget_record["clothing"] += set_clothing_budget
+    budget_record["food"] += set_entertainment_budget
+    
 
     item = {""}
     balance = 0
