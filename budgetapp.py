@@ -20,38 +20,42 @@ class Shopping:
     budget_record["food"] += set_food_budget
     budget_record["clothing"] += set_clothing_budget
     budget_record["food"] += set_entertainment_budget
-    
 
-    item = {""}
-    balance = 0
-    def deposit(self):
-        input("W E L C O M E ! \n How Much would you like to deposit? \n")
+    # Total budget calculated
+    total_budget = budget_record["food"] + budget_record["clothing"] + budget_record["entertainment"]
+    print(f"Your Total Budget is {total_budget}")
 
-
-    def withdraw(self):
-        balance = 0
-        withdrawn = input("W E L C O M E ! \n How Much would you like to withdraw? \n")
-        if balance >= withdrawn:
-            balance -= withdrawn
-            return balance
-        else:
-            print("insufficient funds!")
-    def balance(self):
-        pass
-
-    def transfer(self):
-        transfer_from = input("Which Category would you like to transfer from? ... \n")
-        transfer_amount = int(input("Enter Amount to transfer"))
-
-        transfer_to = int(input("Which Category would you like to transfer to? ...\n"))
-
-        # if transfer_from == food:
-        #     food = food - transfer_amount
-        #
-        # else:
-        #     print("Wrong Input")
-
-
-shop = Shopping("pilau", "jacket", "movie")
-print(shop.cloth)
-shop.deposit()
+#
+#     item = {""}
+#     balance = 0
+#     def deposit(self):
+#         input("W E L C O M E ! \n How Much would you like to deposit? \n")
+#
+#
+#     def withdraw(self):
+#         balance = 0
+#         withdrawn = input("W E L C O M E ! \n How Much would you like to withdraw? \n")
+#         if balance >= withdrawn:
+#             balance -= withdrawn
+#             return balance
+#         else:
+#             print("insufficient funds!")
+#     def balance(self):
+#         pass
+#
+#     def transfer(self):
+#         transfer_from = input("Which Category would you like to transfer from? ... \n")
+#         transfer_amount = int(input("Enter Amount to transfer"))
+#
+#         transfer_to = int(input("Which Category would you like to transfer to? ...\n"))
+#
+#         # if transfer_from == food:
+#         #     food = food - transfer_amount
+#         #
+#         # else:
+#         #     print("Wrong Input")
+#
+#
+# shop = Shopping("pilau", "jacket", "movie")
+# print(shop.cloth)
+# shop.deposit()
