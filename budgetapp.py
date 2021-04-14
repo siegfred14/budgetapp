@@ -9,6 +9,10 @@ class Shopping:
         "clothing": 0,
         "entertainment": 0
     }
+    set_food_budget = int(input("Enter Budget for food"))
+    set_clothing_budget = int(input("Enter Budget for Clothing"))
+    set_entertainment_budget = int(input("Enter Budget for Entertainment"))
+
 
 
     item = {""}
