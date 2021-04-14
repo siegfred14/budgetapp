@@ -4,7 +4,12 @@ class Shopping:
         self.cloth = clothing
         self.entertain = entertainment
 
-    # option = input("Enter food, clothing or entertainment")
+    budget_record = {
+        "food": 0,
+        "clothing": 0,
+        "entertainment": 0
+    }
+
 
     item = {""}
     balance = 0
@@ -29,11 +34,11 @@ class Shopping:
 
         transfer_to = int(input("Which Category would you like to transfer to? ...\n"))
 
-        if transfer_from == food:
-            food = food - transfer_amount
-
-        else:
-            print("Wrong Input")
+        # if transfer_from == food:
+        #     food = food - transfer_amount
+        #
+        # else:
+        #     print("Wrong Input")
 
 
 shop = Shopping("pilau", "jacket", "movie")
