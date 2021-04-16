@@ -93,6 +93,7 @@ class Budget:
             else:
                 self.transfer()
             print(f"You have Transferred {transfer_amount} successfully")
+            self.balance()
 
         elif transfer_from == 2:
             self.cloth -= transfer_amount
@@ -103,6 +104,7 @@ class Budget:
             else:
                 self.transfer()
             print(f"You have Transferred {transfer_amount} successfully")
+            self.balance()
 
         if transfer_from == 3:
             self.entertain -= transfer_amount
@@ -113,6 +115,7 @@ class Budget:
             else:
                 self.transfer()
             print(f"You have Transferred {transfer_amount} successfully")
+            self.balance()
 
         else:
             print("Wrong Input")
