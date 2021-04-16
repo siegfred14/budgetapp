@@ -96,7 +96,7 @@ class Budget:
         print(f"Food --> {self.food} \n Clothing --> {self.cloth} \n Entertainment --> {self.entertain}")
 
     def transfer(self):
-        transfer_from = input("Category to transfer from ... \n 1 for Food \n 2 for Cloth \n 3 for Entertainment \n")
+        transfer_from = int(input("Category to transfer from ... \n 1 food \n 2 for Cloth \n 3 for Entertainment \n"))
         transfer_amount = int(input("Enter Amount to transfer"))
         transfer_to = int(input("Category to transfer To ... \n 1 for Food \n 2 for Cloth \n 3 for Entertainment \n"))
 
@@ -122,7 +122,7 @@ class Budget:
             print(f"You have Transferred {transfer_amount} successfully")
             self.balance()
 
-        if transfer_from == 3:
+        elif transfer_from == 3:
             self.entertain -= transfer_amount
             if transfer_to == 2:
                 self.cloth += transfer_amount
@@ -135,9 +135,9 @@ class Budget:
 
         else:
             print("Wrong Input")
-            self.menu()
+            self.transfer()
 
 
 shop = Budget(500, 4000, 3000)
 print(shop.cloth)
-shop.withdraw()
+shop.transfer()
