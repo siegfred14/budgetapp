@@ -1,9 +1,11 @@
+# A Budget class which instantiates objects based on different budget categories
 class Budget:
     def __init__(self, food, clothing, entertainment):
         self.food = food
         self.cloth = clothing
         self.entertain = entertainment
 
+    # menu method - a user friendly dashboard for transactions on budget app
     def menu(self):
         menu_choice = int(input("W E L C O M E ! \n Please pick an option \n 1.) Deposit \n 2.) Withdrawal \n 3.) "
                                 "Check Category Balances \n 4.) Transfer \n"))
@@ -74,6 +76,7 @@ class Budget:
         print("Your Balances are...")
         print(f"Food --> {self.food} \n Clothing --> {self.cloth} \n Entertainment --> {self.entertain}")
 
+    # Transfer method - to transfer balance between budget categories
     def transfer(self):
         transfer_from = int(input("Category to transfer from ... \n 1 food \n 2 for Cloth \n 3 for Entertainment \n"))
         transfer_amount = int(input("Enter Amount to transfer"))
@@ -117,6 +120,7 @@ class Budget:
             self.transfer()
 
 
-shop = Budget(500, 4000, 3000)
-print(shop.cloth)
-shop.menu()
+# instantiating the class with amounts for categories food, cloth and entertainment
+weekend_shopping = Budget(500, 4000, 3000)
+
+weekend_shopping.menu()
