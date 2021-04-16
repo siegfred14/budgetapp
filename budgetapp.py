@@ -91,13 +91,6 @@ class Budget:
             self.withdraw()
         self.balance()
 
-    #
-    #     withdrawn = input("W E L C O M E ! \n How Much would you like to withdraw? \n")
-    #     if balance >= withdrawn:
-    #         balance -= withdrawn
-    #         return balance
-    #     else:
-    #         print("insufficient funds!")
     def balance(self):
         print("Your Balances are...")
         print(f"Food --> {self.food} \n Clothing --> {self.cloth} \n Entertainment --> {self.entertain}")
