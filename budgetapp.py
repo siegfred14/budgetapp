@@ -75,11 +75,11 @@ class Budget:
     def balance(self):
         print("Your Balances are...")
         print(f"Food --> {self.food} \n Clothing --> {self.cloth} \n Entertainment --> {self.entertain}")
-        self.menu()
+        self.proceed()
 
     # to perform another transaction
     def proceed(self):
-        to_continue = input('Would you like to perform another transaction (y/n)... ')
+        to_continue = input('Would you like to perform another function (y/n)... ')
         if to_continue == 'y':
             self.menu()
         elif to_continue == 'n':
@@ -90,9 +90,9 @@ class Budget:
 
     # Transfer method - to transfer balance between budget categories
     def transfer(self):
-        transfer_from = int(input("Category to transfer from ... \n 1 food \n 2 for Cloth \n 3 for Entertainment \n"))
+        transfer_from = int(input("Category to transfer from ... \n 1 Food \n 2 Cloth \n 3 Entertainment \n"))
         transfer_amount = int(input("Enter Amount to transfer"))
-        transfer_to = int(input("Category to transfer To ... \n 1 for Food \n 2 for Cloth \n 3 for Entertainment \n"))
+        transfer_to = int(input("Category to transfer To ... \n 1 Food \n 2 Cloth \n 3 Entertainment \n"))
 
         if transfer_from == 1:
             self.food -= transfer_amount
