@@ -79,11 +79,11 @@ class Budget:
                                             '''))
 
         if withdrawal_source == 1:
-            self.food += withdrawal_amount
+            self.food -= withdrawal_amount
         elif withdrawal_source == 2:
-            self.cloth += withdrawal_amount
+            self.cloth -= withdrawal_amount
         elif withdrawal_source == 3:
-            self.entertain += withdrawal_amount
+            self.entertain -= withdrawal_amount
         elif withdrawal_source == 4:
             self.menu()
         else:
