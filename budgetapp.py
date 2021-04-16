@@ -5,7 +5,7 @@ class Budget:
         self.cloth = clothing
         self.entertain = entertainment
 
-    # menu method - a user friendly dashboard for transactions on budget app
+    # menu method - a user friendly dashboard for transactions on the budget app
     def menu(self):
         menu_choice = int(input("W E L C O M E ! \n Please pick an option \n 1.) Deposit \n 2.) Withdrawal \n 3.) "
                                 "Check Category Balances \n 4.) Transfer \n"))
@@ -75,6 +75,18 @@ class Budget:
     def balance(self):
         print("Your Balances are...")
         print(f"Food --> {self.food} \n Clothing --> {self.cloth} \n Entertainment --> {self.entertain}")
+        self.menu()
+
+    # to perform another transaction
+    def proceed(self):
+        to_continue = input('Would you like to perform another transaction (y/n)... ')
+        if to_continue == 'y':
+            self.menu()
+        elif to_continue == 'n':
+            print('Good Bye!')
+            exit()
+        else:
+            print('Wrong input!\n Enter (y/n)')
 
     # Transfer method - to transfer balance between budget categories
     def transfer(self):
