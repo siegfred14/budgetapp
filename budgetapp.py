@@ -45,6 +45,29 @@ class Budget:
             print("Wrong input, Try again")
             self.menu()
 
+    def deposit(self):
+        deposit_choice = int(input('''
+                                    Which category would you like to deposit to? \n 
+                                    1.) for food \n 
+                                    2.) for clothing \n 
+                                    3.) for entertainment
+                                    4.) exit
+                                    '''))
+        deposit_amount = int(input("W E L C O M E ! \n How Much would you like to deposit? \n "))
+
+        if deposit_choice == 1:
+            self.food += deposit_amount
+        elif deposit_choice == 2:
+            self.cloth += deposit_amount
+        elif deposit_choice == 3:
+            self.entertain += deposit_amount
+        elif deposit_choice == 4:
+            self.menu()
+        else:
+            print("Wrong input, Try again")
+            self.deposit()
+
+
 
 shop = Budget(500, 4000, 3000)
 print(shop.cloth)
