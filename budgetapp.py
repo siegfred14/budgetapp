@@ -26,8 +26,8 @@ class Budget:
     # print(f"Your Total Budget is {total_budget}")
     #
 
-#     item = {""}
-#     balance = 0
+    #     item = {""}
+    #     balance = 0
 
     def menu(self):
         menu_choice = int(input("W E L C O M E ! \n Please pick an option \n 1.) Deposit \n 2.) Withdrawal \n 3.) "
@@ -46,14 +46,14 @@ class Budget:
             self.menu()
 
     def deposit(self):
+        deposit_amount = int(input("W E L C O M E ! \n How Much would you like to deposit? \n "))
         deposit_choice = int(input('''
                                     Which category would you like to deposit to? \n 
                                     1.) for food \n 
                                     2.) for clothing \n 
-                                    3.) for entertainment
-                                    4.) exit
+                                    3.) for entertainment \n
+                                    4.) exit \n
                                     '''))
-        deposit_amount = int(input("W E L C O M E ! \n How Much would you like to deposit? \n "))
 
         if deposit_choice == 1:
             self.food += deposit_amount
@@ -66,6 +66,7 @@ class Budget:
         else:
             print("Wrong input, Try again")
             self.deposit()
+        self.balance()
 
     # def withdraw(self):
     #
@@ -124,4 +125,4 @@ class Budget:
 
 shop = Budget(500, 4000, 3000)
 print(shop.cloth)
-shop.menu()
+shop.deposit()
