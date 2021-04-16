@@ -20,7 +20,7 @@ class Budget:
             print("Wrong input, Try again")
             self.menu()
 
-    # Deposit method to add cash into a budget category
+    # Deposit method - to add cash into a budget category
     def deposit(self):
         deposit_amount = int(input("W E L C O M E ! \n How Much would you like to deposit? \n "))
         deposit_choice = int(input('''
@@ -45,6 +45,7 @@ class Budget:
         print("Transaction Successful!")
         self.balance()
 
+    # withdraw method - to remove cash from a budget category
     def withdraw(self):
         withdrawal_amount = int(input("W E L C O M E ! \n How Much would you like to withdraw? \n "))
         withdrawal_source = int(input('''   
@@ -68,6 +69,7 @@ class Budget:
             self.withdraw()
         self.balance()
 
+    # balance method - to compute balances on all budget categories
     def balance(self):
         print("Your Balances are...")
         print(f"Food --> {self.food} \n Clothing --> {self.cloth} \n Entertainment --> {self.entertain}")
