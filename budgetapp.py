@@ -68,7 +68,29 @@ class Budget:
             self.deposit()
         self.balance()
 
-    # def withdraw(self):
+    def withdraw(self):
+        withdrawal_amount = int(input("W E L C O M E ! \n How Much would you like to withdraw? \n "))
+        withdrawal_source = int(input('''   
+                                            Which category would you like to withdraw from? \n 
+                                            1.) for food \n 
+                                            2.) for clothing \n 
+                                            3.) for entertainment \n
+                                            4.) exit \n
+                                            '''))
+
+        if withdrawal_source == 1:
+            self.food += withdrawal_amount
+        elif withdrawal_source == 2:
+            self.cloth += withdrawal_amount
+        elif withdrawal_source == 3:
+            self.entertain += withdrawal_amount
+        elif withdrawal_source == 4:
+            self.menu()
+        else:
+            print("Wrong input, Try again")
+            self.withdraw()
+        self.balance()
+
     #
     #     withdrawn = input("W E L C O M E ! \n How Much would you like to withdraw? \n")
     #     if balance >= withdrawn:
@@ -125,4 +147,4 @@ class Budget:
 
 shop = Budget(500, 4000, 3000)
 print(shop.cloth)
-shop.deposit()
+shop.withdraw()
